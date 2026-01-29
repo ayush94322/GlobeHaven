@@ -1,0 +1,81 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+<div class="row mt-4">
+  <div class="col-8 offset-2">
+    <h2>Add new Listing</h2>
+    <form method="post" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          class="form-control"
+          id="new_title"
+          placeholder="Add title"
+          required
+        />
+        <div class="invalid-feedback">Title field is required!</div>
+      </div>
+      <div class="mb-3">
+        <label for="new_description" class="form-label">Description</label>
+        <textarea
+          name="listing[description]"
+          class="form-control"
+          id="new_description"
+          placeholder="Add a brief description"
+          required
+        ></textarea>
+        <div class="invalid-feedback">Description field is required!</div>
+      </div>
+      <div class="mb-3">
+        <label for="new_image" class="form-label">Upload Image</label>
+        <input
+          type="file"
+          name="listing[image]"
+          class="form-control"
+          id="new_image"
+          required
+        />
+      </div>
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="new_price" class="form-label">Price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            class="form-control"
+            id="new_price"
+            placeholder="Add price"
+            required
+          />
+          <div class="invalid-feedback">Price field is required!</div>
+        </div>
+        <div class="mb-3 col-md-8">
+          <label for="new_country" class="form-label">Country</label>
+          <input
+            type="text"
+            name="listing[country]"
+            class="form-control"
+            id="new_country"
+            placeholder="Add country"
+            required
+          />
+          <div class="invalid-feedback">Country field is required!</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="new_location" class="form-label">Location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          class="form-control"
+          id="new_location"
+          placeholder="Add location"
+          required
+        />
+        <div class="invalid-feedback">Location field is required!</div>
+      </div>
+      <button class="btn btn-danger mb-5" id="new_btn">Add</button>
+    </form>
+  </div>
+</div>
