@@ -30,6 +30,11 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 - Display property locations on the map
 - Visual property exploration
 
+### Payment Gateway Integration
+-Secure and reliable payment system integrated
+-Accepts domestic and international payment both
+-All type of payment upi, cards, qr-based .etc accepted
+
 ### Responsive Design
 - Mobile-friendly UI built with **Bootstrap**
 - Seamless experience across all devices
@@ -69,6 +74,9 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 - Passport.js (Local Strategy, hashing using salting)
 - Express-Session
 
+**Payment Gateway:**
+-Razorpay gateway integrated
+
 **Image Upload & Storage:**  
 - Cloudinary
 - Multer (for handling multipart/form-data)
@@ -87,4 +95,3 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 
 - Advanced filters & search
 - Booking & availability system
-- Payment gateway
