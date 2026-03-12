@@ -17,7 +17,7 @@
         <p class="card-text">
           &#8377;<%= listing.price.toLocaleString("en-IN") %>/night
         </p>
-        <a href="#" class="btn btn-danger index-btn" id="index_edit_btn">Book Now</a>
+        <a href="/listings/<%= listing.id %>/book" class="btn btn-danger index-btn" id="index_edit_btn">Book Now</a>
       </div>
     </div>
     <% } %>

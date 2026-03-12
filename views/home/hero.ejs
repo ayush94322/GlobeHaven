@@ -17,7 +17,7 @@
 <body>
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
+    <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"> GlobeHaven</i></a>
     <button
       class="navbar-toggler"
       type="button"
@@ -54,11 +54,7 @@
 
       <div class="hero-buttons">
         <a href="/listings" class="home-btn primary">Explore Destinations</a>
-        <% if(!currUser) {%>
-            <a href="/signup" class="home-btn secondary">Become a Host</a>
-        <% } else {%>    
-            <a href="/listings/new" class="home-btn secondary">Become a Host</a>
-        <% } %>    
+        <a href="/listings/new" class="home-btn secondary">Become a Host</a>
       </div>
     </div>
   </section>

@@ -15,6 +15,9 @@ router.post("/", isLoggedIn, upload.single("listing[image]"), validateListing, w
 //Index Route
 router.get("/", wrapAsync(listingController.index));
 
+//Search bar
+router.get("/search", wrapAsync(listingController.getSearch));
+
 //Show Route
 router.get("/:id", validateListing, wrapAsync(listingController.showListing)); 
 
