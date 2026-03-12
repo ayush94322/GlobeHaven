@@ -65,3 +65,13 @@ module.exports.destroyListing = async (req, res) => {
   req.flash("success", "Listing Deleted Successfully!");
   res.redirect("/listings");
 };
+
+module.exports.getSearch = async (req, res)=>{
+    let title = req.query.title;
+    let capsTitle = title
+          .split(" ")
+          .map(word => word[0].toUpperCase() + word.slice(1))
+          .join(" ");
+    let listing = await Listing.find({title: capsTitle});
+    res.redirect(`/listings/${listing[0]._id}`);
+}

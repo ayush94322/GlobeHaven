@@ -14,11 +14,13 @@ const flash = require("connect-flash");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
+const Razorpay = require("razorpay");
 
 
 const listingRouter = require("./routes/listing.js");
 const reviewRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
+const bookingRouter = require("./routes/booking.js");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -80,6 +82,12 @@ app.use((req, res, next)=>{
     next();
 })
 
+// Payment gateway integration
+const razorpay = new Razorpay({
+    key_id : process.env.RAZORPAY_API_KEY,
+    key_secret: process.env.RAZORPAY_SECRET_CODE
+});
+
 
 app.get("/", (req, res)=>{
     res.render("home/hero.ejs");
@@ -91,6 +99,7 @@ app.get("/terms", (req, res)=>{
     res.render("terms/terms.ejs");
 });
 app.use("/listings", listingRouter);
+app.use("/listings/:id/book", bookingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
