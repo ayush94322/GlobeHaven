@@ -4,7 +4,7 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 
 ---
 
-## ✨ Features
+## Features
 
 ### User Authentication & Authorization
 - Secure user registration (Sign up)
@@ -41,7 +41,7 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 
 ---
 
-## 🚀 Key Highlights
+## Key Highlights
 
 - Built a **full-stack web application** using **MVC architecture**
 - Implemented **authentication & authorization** using **Passport.js**
@@ -54,7 +54,7 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 **Frontend:**  
 - HTML5
@@ -91,7 +91,7 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 - Git
 - GitHub
 
-## 🔮 Future Scope
+## Future Scope
 
 - Advanced filters & search
 - Booking & availability system
