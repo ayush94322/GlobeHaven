@@ -75,7 +75,7 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 - Express-Session
 
 **Payment Gateway:**
--Razorpay gateway integrated
+- Razorpay gateway integrated
 
 **Image Upload & Storage:**  
 - Cloudinary
