@@ -31,9 +31,9 @@ GlobeHaven is a full-stack travel web application that allows users to discover 
 - Visual property exploration
 
 ### Payment Gateway Integration
--Secure and reliable payment system integrated
--Accepts domestic and international payment both
--All type of payment upi, cards, qr-based .etc accepted
+- Secure and reliable payment system integrated
+- Accepts domestic and international payment both
+- All type of payment upi, cards, qr-based .etc accepted
 
 ### Responsive Design
 - Mobile-friendly UI built with **Bootstrap**
