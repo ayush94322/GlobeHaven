@@ -12,7 +12,13 @@ module.exports.renderNewForm = (req, res) => {
   res.render("listings/new.ejs");
 };
 module.exports.createNewListing = async (req, res) => {
-  const {location, country} = req.body.listing;
+  const {title, location, country} = req.body.listing;
+  capTitle = title
+    .split(" ")
+    .filter(word => word !== "")
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+  req.body.listing.title = capTitle;
   const response = await geocodingClient.forwardGeocode({
     query: `${location}, ${country}`,
     limit: 1
@@ -70,6 +76,7 @@ module.exports.getSearch = async (req, res)=>{
     let title = req.query.title;
     let capsTitle = title
           .split(" ")
+          .filter(word => word !== "")
           .map(word => word[0].toUpperCase() + word.slice(1))
           .join(" ");
     let listing = await Listing.find({title: capsTitle});
